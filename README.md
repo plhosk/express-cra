@@ -11,8 +11,8 @@ Features:
 
 Does not include: 
 
-- Authentication (i.e. `passport`) not included.
-- Database integration (i.e. `mongoose`) not included.
+- Authentication (i.e. passport) not included.
+- Database integration (i.e. mongoose) not included.
 
 ---
 
@@ -20,7 +20,7 @@ Does not include:
 
 1. Copy or clone this folder into a new one with the name of your project.
 2. Enter the folder and type and `yarn` to download server packages (if you don't have yarn installed globally you can do it with `npm i -g yarn`)
-3. Edit package.json with the project name and repository
+3. Edit package.json with the project name, repository and license
 4. Edit README.md for the project if desired
 5. `create-react-app <projectname>`
 6. Rename new CRA folder to "app"
