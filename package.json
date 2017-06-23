@@ -18,6 +18,8 @@
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
@@ -31,5 +33,11 @@
   "repository": "https://github.com/plhosk/interest.git",
   "license": "MIT",
   "main": "server/register.js",
-  "author": "Paul Hoskinson"
+  "author": "Paul Hoskinson",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  }
 }
