@@ -30,6 +30,6 @@
   "devDependencies": {},
   "repository": "https://github.com/plhosk/interest.git",
   "license": "MIT",
-  "main": "server/index.js",
+  "main": "server/register.js",
   "author": "Paul Hoskinson"
 }
