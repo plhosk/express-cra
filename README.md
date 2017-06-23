@@ -18,18 +18,21 @@ Does not include:
 
 ### Instructions for starting a new project: 
 
-1. Copy or clone this folder into a new one with the name of your project.
-2. Enter the folder and type and `yarn` to download server packages (if you don't have yarn installed globally you can do it with `npm i -g yarn`)
-3. Edit package.json with the project name, repository and license
-4. Edit README.md for the project if desired
-5. `create-react-app <projectname>`
-6. Rename new CRA folder to "app"
-7. Edit app/package.json and add `"proxy": "http://localhost:5000"`. This will route requests from the internal create-react-app server to the external one.
-8. Type `git init` to initialize Git repository
-9. Git commands: `git status`, `git add .`, `git commit -m 'initial commit'
-10. Create new repository on Github, copy the .git url
-11. `git remote add origin <git-url>`
-12. `git push origin master'
+- `git clone https://github.com/plhosk/express-cra.git`
+- Enter the folder
+- `git remote remove origin`
+- `git remote add origin <url to new github repository>`
+- `yarn` to download server packages (if you don't have yarn installed globally you can do it with `npm i -g yarn`)
+- Edit package.json with the project name, repository and license
+- Edit README.md for the project if desired
+- `create-react-app <projectname>`
+- Rename new CRA folder to "app"
+- Edit app/package.json and add `"proxy": "http://localhost:5000"`. This will route requests from the internal create-react-app server to the external one.
+- Type `git init` to initialize Git repository
+- Git commands: `git status`, `git add .`, `git commit -m 'initial commit'
+- Create new repository on Github, copy the .git url
+- `git remote add origin <git-url>`
+- `git push origin master'
 
 ### Starting the server:
 
