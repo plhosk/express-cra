@@ -5,11 +5,12 @@ Minimal Expess API server for use with create-react-app.
 Features:
 
 - Express server running on Node.
-- ESLint with eslint-config-airbnb, ready for VS Code integration
-- babel-register for ES6 transpilation of server code
-- babel-cli to pre-transpile on production deployment
+- ESLint with eslint-config-airbnb, for the purpose of Visual 
+Studio Code integration
+- babel-register with ES2015 and stage-0 plugins, to allow for use of the latest ECMAScript features
+- babel-cli to do a one-time transpile for production deployment
 
-Does not include: 
+Not included: 
 
 - Authentication (i.e. passport) not included.
 - Database integration (i.e. mongoose) not included.
@@ -36,6 +37,8 @@ Does not include:
 
 - Start API server with `yarn start`
 - In separate terminal, start front-end by going into "app" folder and type `yarn start`
+- During development you view the app on port 3000 (the create-react-app internal server). Any back-end requests will be routed to port 5000 because of the proxy config.
+- When deploying to production, create-react-app will make a static index.html in the public folder, which can be seen by onnecting to the express server on port 5000.
 
 ### Heroku deploy:
 
