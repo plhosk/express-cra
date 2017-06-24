@@ -2,18 +2,29 @@
   "name": "express-cra",
   "version": "1.0.0",
   "description": "Express API server wrapper for Create-React-App",
+  "repository": "https://github.com/plhosk/interest.git",
+  "author": "Paul Hoskinson",
+  "license": "MIT",
+  "main": "server/register.js",
   "engines": {
     "node": "8.*"
   },
   "scripts": {
     "start": "node server/register.js",
+    "remove-static": "rm -rf app/build/ server-compiled/",        
     "heroku-start": "cross-env NODE_ENV=production node server-compiled/server.js",
-    "heroku-postbuild": "babel server -d server-compiled && cd app/ && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "babel server -d server-compiled && cd app/ && yarn && yarn build"
   },
   "cacheDirectories": [
     "node_modules",
     "app/node_modules"
   ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
@@ -29,15 +40,5 @@
     "eslint-plugin-react": "^7.0.1",
     "express": "^4.15.3"
   },
-  "devDependencies": {},
-  "repository": "https://github.com/plhosk/interest.git",
-  "license": "MIT",
-  "main": "server/register.js",
-  "author": "Paul Hoskinson",
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ]
-  }
+  "devDependencies": {}
 }

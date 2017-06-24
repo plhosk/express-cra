@@ -39,6 +39,7 @@ Not included:
 - In separate terminal, start front-end by going into "app" folder and type `yarn start`
 - During development you view the app on port 3000 (the create-react-app internal server). Any back-end requests will be routed to port 5000 because of the proxy config.
 - When deploying to production, create-react-app will make a static index.html in the public folder, which can be seen by onnecting to the express server on port 5000.
+- To delete the static production files, run the command `yarn remove-static`
 
 ### Heroku deploy:
 
@@ -46,8 +47,7 @@ Not included:
 2. `heroku create`
 3. `heroku apps:rename <new name>`
 4. `heroku config:set KEY1=VALUE KEY2=VALUE`
+5. `heroku config:set NPM_CONFIG_PRODUCTION=false` (necessary for heroku to install devDependencies)
 5. `git push heroku master`
-
-The heroku-postbuild command in package.json should take care of building both server and app. (Otherwise Heroku will not install devDependencies unless you set `heroku config:set NPM_CONFIG_PRODUCTION=false`)
 
 The `yarn heroku-start` in package.json is the same command as in `Procfile`, which is what Heroku uses to start the server.
